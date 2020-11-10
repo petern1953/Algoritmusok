@@ -1,21 +1,14 @@
-// Írasd ki egy tetszőleges elemszámú, csak egész számokat tartalmazó tömb átlagát!
+// Írasd ki egy tetszőleges elemszámú, csak egész számokat tartalmazó tömb páros elemeinek a számát!
 
-// const numericArray = [1232, 65, 956, 1234, 7, 36, 72];
 const numericArray = [1232, 65, 956, 1234, 7, 36, 70, 1200];
 
-// const numericArray = [];
-
-function arrayMeanValue(arr) {
-    if (arr.length == 0) {
-        console.log('üres tömb');
-        return undefined;
-    }
-    let accumulator = 0;
+function evenElementsCount(arr) {
+    let count = 0;
 
     for (let i = 0; i < arr.length; i += 1) {
-        accumulator += arr[i];
+        (arr[i] % 2) ? {} : count += 1;
     }
-    return accumulator / arr.length;
+    return count;
 }
 
-console.log(arrayMeanValue(numericArray));
+console.log('A tömb páros elemeinek száma: ' + evenElementsCount(numericArray));

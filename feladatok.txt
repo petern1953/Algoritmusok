@@ -7,7 +7,7 @@ Feladatok
 
 + Írasd ki egy tetszőleges elemszámú, csak egész számokat tartalmazó tömb összegét!
 
-Írasd ki egy tetszőleges elemszámú, csak egész számokat tartalmazó tömb páros elemeinek a számát!
++ Írasd ki egy tetszőleges elemszámú, csak egész számokat tartalmazó tömb páros elemeinek a számát!
 
 Írasd ki egy tetszőleges elemszámú, csak egész számokat tartalmazó tömb második legkisebb elemét!
 
