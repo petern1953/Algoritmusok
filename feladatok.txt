@@ -5,7 +5,7 @@ Feladatok
 
 + Írasd ki egy tetszőleges elemszámú, csak egész számokat tartalmazó tömb átlagát!
 
-Írasd ki egy tetszőleges elemszámú, csak egész számokat tartalmazó tömb összegét!
++ Írasd ki egy tetszőleges elemszámú, csak egész számokat tartalmazó tömb összegét!
 
 Írasd ki egy tetszőleges elemszámú, csak egész számokat tartalmazó tömb páros elemeinek a számát!
 
