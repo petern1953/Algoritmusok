@@ -1,4 +1,4 @@
-// Írasd ki egy tetszőleges elemszámú, csak egész számokat tartalmazó tömb átlagát!
+// keressük a tömbben a 23-as számot!
 
 const numericArray = [1232, 65, 956, 1234, 7, 23, 36, 70, 1200];
 let numberToFind = 23;
