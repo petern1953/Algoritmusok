@@ -25,7 +25,7 @@ const mixedArray = [1232, 65, 956, 1234, 7, 'asd', 'Kuka', 23, 'barack', 'Kings 
 
 function orderingNumbersAndStrings(arr) {
     const assistArrayNum = [];
-    const assistArrayStr = [];
+    let assistArrayStr = []; // ! nem const
     for (let i = 0; i < arr.length; i += 1) {
         switch (typeof arr[i]) {
             case "string":
@@ -37,21 +37,25 @@ function orderingNumbersAndStrings(arr) {
             default:
                 alert('Nem string / numerikus adat!');
         }
-        if (assistArrayStr.length != assistArrayNum.length) {
-            console.log(assistArrayStr, assistArrayNum)
-            alert('A stringek és numerikus adatok száma nem egyezik!');
-            return undefined;
-        }
+    }
+    // console.log('Num: ', assistArrayNum, 'Str: ', assistArrayStr)
+    if (assistArrayStr.length != assistArrayNum.length) {
+        alert('A stringek és numerikus adatok száma nem egyezik!');
+        return undefined;
     }
 
     // sorba rakjuk a stringeket és a numerikus tömböt
     advancedBubbleOrder(assistArrayNum);
-    advancedBubbleOrder(assistArrayStr);
+    // console.log(assistArrayNum);
+    // advancedBubbleOrder(assistArrayStr); // ez nem működik, helyette
+    // assistArrayStr =
+    assistArrayStr.sort(); // ettől sem lett jobb, a hosszabb stringek előrébb vannak a sorban
+    console.log('rendezett stringtömb: ', assistArrayStr);
 
     // majd egyesítjük őket az eredeti tömbben
     for (let i = 0; i < assistArrayNum.length; i += 1) {
         arr[2 * i] = assistArrayNum[i];
-        arr[2 * i + 1] = assistArrayNum[i];
+        arr[2 * i + 1] = assistArrayStr[i];
     }
     return arr;
 }
