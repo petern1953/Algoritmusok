@@ -2,10 +2,12 @@
 // Külön tömbökbe készítsük el a két tömb: metszetét, unióját, különbségét,
 // és descartes szorzatát. Írassuk ki az új tömböket!
 
-const numericArrayA = [1232, 23, 65, 231, 956, 23, 1234, 70];
-const numericArrayB = [23, 36, 70, 123, 231, 1200, 23, 231];
-console.log('ArryA: ', numericArrayA);
-console.log('ArryB: ', numericArrayB);
+// const numericArrayA = [1232, 23, 65, 231, 956, 23, 1234, 70];
+// const numericArrayB = [23, 36, 70, 123, 231, 1200, 23, 231, 1232, 65];
+const numericArrayA = [1232, 5, 23];
+const numericArrayB = [23, 36];
+console.log('ArrayA: ', numericArrayA);
+console.log('ArrayB: ', numericArrayB);
 
 function AintersectB(arr1, arr2) {
     const intersectArr = [];
@@ -26,21 +28,6 @@ function AintersectB(arr1, arr2) {
 
 console.log('Intersect: ', AintersectB(numericArrayA, numericArrayB));
 
-
-function AunioB(arr1, arr2) {
-    const unioArr = [];
-
-    for (let i = 0; i < arr1.length; i += 1) {
-        unioArr.push(arr1[i]);
-    }
-    for (let j = 0; j < arr2.length; j += 1) {
-        unioArr.push(arr2[j]);
-    }
-    return unioArr;
-}
-
-console.log('Unio: ', AunioB(numericArrayA, numericArrayB));
-
 function AdiffB(arr1, arr2) {
     const diffArr = arr1.slice();
 
@@ -55,6 +42,19 @@ function AdiffB(arr1, arr2) {
 }
 
 console.log('Diff: ', AdiffB(numericArrayA, numericArrayB));
+
+// az unio az egyesített halmaz és a metszet különbsége, ugyanis az első a másodikat 2x tartalmazza
+function AunioB(arr1, arr2) {
+    let unioArr = [];
+    unioArr = unioArr.concat(arr1).concat(arr2);
+    let intersectArr = AintersectB(arr1, arr2);
+    unioArr = AdiffB(unioArr, intersectArr);
+    return unioArr;
+}
+
+console.log('Unio: ', AunioB(numericArrayA, numericArrayB));
+
+
 
 function ADprodB(arr1, arr2) {
     const DprodArr = [];
