@@ -100,12 +100,25 @@ function AdiffB(arr1, arr2) {
 console.log('Diff: ', AdiffB(numericArrayA, numericArrayB));
 
 
+// function ADprodB(arr1, arr2) {
+//     const DprodArr = [];
+//     for (let i = 0; i < arr1.length; i += 1) {
+//         for (let j = 0; j < arr2.length; j += 1) {
+//             DprodArr.push([arr1[i], arr2[j]]);
+//         }
+//     }
+//     return DprodArr;
+// }
+
+// or, in an advanced way (do not sort here!):
+
 function ADprodB(arr1, arr2) {
+
     const DprodArr = [];
 
-    for (let i = 0; i < arr1.length; i += 1) {
-        for (let j = 0; j < arr2.length; j += 1) {
-            DprodArr.push([arr1[i], arr2[j]]);
+    for (a of arr1) {
+        for (b of arr2) {
+            DprodArr.push([a, b]);
         }
     }
     return DprodArr;

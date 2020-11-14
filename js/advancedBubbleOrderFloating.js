@@ -34,6 +34,7 @@ function advancedBubbleOrderFloating(arr) {
             }
         }
     }
+    return arr;
 }
 
 advancedBubbleOrderFloating(numericArray);
